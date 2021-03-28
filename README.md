@@ -1,9 +1,8 @@
 # PlanMiles
 ## _"Não deixe para amanhã, o que você pode planejar hoje"_
 - Sem cadastro
-- Simples
-- Prático
-- e Direto 
+- Simples e Prático
+
 
 
 ### Requisitos
