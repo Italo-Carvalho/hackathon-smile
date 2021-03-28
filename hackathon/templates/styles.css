@@ -1,0 +1,195 @@
+body {
+  background-image: url('./images/background.png') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#regForm .tab.onepage img {
+  padding: 16px 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+#regForm .tab.onepage > h1 {
+  background: #FF5A00;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0 8px;
+}
+#regForm .tab.onepage .divInputPoupaMes {
+  background: #ffffff;
+  color: #000;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 24px 64px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+#regForm .tab.onepage .divInputPoupaMes p{
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#regForm .tab.onepage .divInputPoupaMes label {
+  border-bottom: 1px solid #9e9e9e;
+  color: #9e9e9e;
+  font-size: 12px;
+  padding: 10px 0 1px 0;
+  width: 100%;
+}
+
+#regForm .tab.onepage .divInputPoupaMes label input {
+  color: #000;
+  font-size: 24px;
+  width: 80%;
+  padding-left: 24px;
+  outline: none;
+}
+
+#regForm .tab.onepage .divInputPorcentagem {
+  background: #ffffff;
+  color: #000;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 24px 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  margin-top: 24px;
+  z-index: 2;
+  top: 20px;
+  position: relative;
+  box-shadow: 10px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+#regForm .tab.onepage .divInputPorcentagem h1 {
+  color: #5C5C5C;
+  font-size: 20px;
+  text-align: center;
+}
+
+#regForm .tab.onepage .divInputPorcentagem label {
+  color: #9e9e9e;
+  font-size: 12px;
+  padding: 6px 0 1px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#regForm .tab.onepage .divInputPorcentagem label span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+#regForm .tab.onepage .divInputPorcentagem label input {
+  width: 100%;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  display: inline-block;
+  height: 0.5em;
+  border-radius: 5px;
+  background-color: #EAE8E8;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -5px;
+  background-color: #FF5A00;
+  border-radius: 50%;
+}
+
+#regForm .tab.onepage .results {
+  background: #ffffff;
+  color: #000;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 24px 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+#regForm .tab.onepage .results div {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#regForm .tab.onepage .results label {
+  border-bottom: 1px solid #9e9e9e;
+  color: #9e9e9e;
+  font-size: 12px;
+  padding: 24px 0 1px 0;
+  width: 100%;
+}
+
+#regForm .tab.onepage .results label input {
+  color: #000;
+  font-size: 24px;
+  width: 80%;
+  padding-left: 32px;
+  outline: none;
+  text-align: left;
+}
+
+button {
+  background: #FF5A00;
+  color: #ffffff;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 46px auto 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px;
+  font-size: 20px;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #da4e02
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tab {
+  display: none;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}

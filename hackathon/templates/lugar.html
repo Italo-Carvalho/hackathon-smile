@@ -1,0 +1,5 @@
+
+<option value="">---------</option>
+{% for local in locais %}
+<option value="{{ local.pk }}">{{ local.nome }}</option>
+{% endfor %}

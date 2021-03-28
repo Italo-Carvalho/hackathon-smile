@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block 'content' %}
+
+
+  <form id='viagem_form' data-locais-url="{% url 'ajax_load_locais' %}" novalidate>
+    <!-- Page 1 -->
+    <div class="tab onepage">
+      <h1>SEU PRÓXIMO DESTINO</h1>
+      <img src="{% static 'images/logo.png' %}" alt="">
+      <div class="divInputPoupaMes">
+        <p>Quanto você poupa por mês ?</p>
+        <label>R$<input type="number" id="id_salario" name="salario"></label>
+      </div>
+      
+      <div class="milesPriceInputs">
+        <div class="divInputPorcentagem">
+          <h1>% para poupar</h1>
+          <label>
+            <span>
+              <p>100%</p>
+              <p>0%</p> 
+            </span>
+            <!-- <input type="range" value="0" min="0" max="100" id="percentage">  -->
+            <input type="range" value="100" min="0" max="100" oninput="this.nextElementSibling.value = this.value">
+            <output class="outputRange">0</output>
+          </label>
+        </div>
+        <div class="results">
+          <div>
+            <label>R$<input type="number" disabled id="id_porcentagem" name="porcentagem"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab onepage">
+      <h1>SEU PRÓXIMO DESTINO</h1>
+      <img src="{% static 'images/logo.png' %}" alt="">
+      <div class="divInputPoupaMes">
+        <p>Escolha seu destino</p>
+        <select id="selectDestino">
+        {% for estado in estados %}
+          <option value="{{estado.pk}}">{{estado.nome}}</option>
+        {% endfor %}
+        </select>
+        
+      </div>
+    </div>
+    <div class="tab onepage">
+      <h1>PAGE 3</h1>
+      <img src="{% static 'images/logo.png' %}" alt="">
+      <div class="divInputPoupaMes">
+        <p>Quanto você poupa por mês ?</p>
+        <label>R$<input type="number" id="price"></label>
+      </div>
+
+      <div class="milesPriceInputs">
+        <div class="divInputPorcentagem">
+          <h1>% para poupar</h1>
+          <label>
+            <span>
+              <p>0%</p>
+              <p>100%</p> 
+            </span>
+            <input type="range" id="porcent"> 
+          </label>
+        </div>
+        <div class="results">
+          <div>
+            <label>Milhas<input type="number" id="milesResult"></label>
+            <label>R$<input type="number" id="priceResult"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Continuar</button>
+    </div>
+  </form>
+
+<script src="{% static 'index.js' %}"></script>
+
+{% endblock 'content'%}

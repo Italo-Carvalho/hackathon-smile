@@ -1,0 +1,17 @@
+{% load humanize %}
+
+Poupado por mês: R${{dados.viagem.porcentagem}} / Milhas: {{milhas_mes|floatformat:"0"|intcomma}}
+</br>
+Preço total: {{total|floatformat:"2"|intcomma}} / Total em milhas {{milhas_total|floatformat:"0"|intcomma}}
+</br>
+Meses para conseguir: {{meses|floatformat:"1"|intcomma}}
+</br>
+estado: {{dados.viagem.estado.nome}}
+</br>
+lugar: {{dados.viagem.lugar.nome}} R$ {{dados.viagem.lugar.preco}}
+</br>
+atividade: {{dados.ativadade.nome}} R$ {{dados.ativadade.preco}}
+</br>
+hospedagem: {{dados.hospedagem.nome}} R$ {{dados.hospedagem.preco}}
+</br>
+restaurante: {{dados.restaurante.nome}} R$ {{dados.restaurante.preco}}

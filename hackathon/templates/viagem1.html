@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block 'content' %}
+{{viagem.salario}}
+<div class='container'>
+<form method='post'>
+{% csrf_token %}
+
+<select name="viagem" id="id_viagem" style='display:none'>
+  <option value="{{viagem.pk}}"></option>
+</select>
+
+<div id="div_id_ativadade" class="form-group"> 
+<label for="id_ativadade" class=" requiredField">Atividade<span class="asteriskField">*</span> </label> 
+<div class=""> 
+<select name="ativadade" class="select form-control" required="" id="id_ativadade" > 
+{% for x in atividade %}
+<option value="{{x.pk}}">{{x.nome}}</option>
+{% endfor %}
+</select> </div> </div>
+
+
+<div id="div_id_hospedagem" class="form-group"> <label for="id_hospedagem" class=" requiredField">
+                Hospedagem<span class="asteriskField">*</span> </label> <div class=""> 
+<select name="hospedagem" class="select form-control" required="" id="id_hospedagem" > 
+{% for x in hospedagem %}
+<option value="{{x.pk}}">{{x.nome}}</option>
+{% endfor %}
+</select> </div> </div>
+
+
+<div id="div_id_restaurante" class="form-group"> <label for="id_restaurante" class=" requiredField">
+Restaurante<span class="asteriskField">*</span> </label> <div class=""> 
+<select name="restaurante" class="select form-control" required="" id="id_restaurante" >
+{% for x in restaurante %}
+<option value="{{x.pk}}">{{x.nome}}</option>
+{% endfor %}
+
+</select> </div> </div>
+
+
+<button type="submit" class="btn btn-primary" style='width:100%'>Enviar</button>
+</form>
+</div>
+{% endblock 'content' %}
+{% block 'script' %}
+{% endblock 'script' %}
