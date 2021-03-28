@@ -1,8 +1,9 @@
-# SMILE
-## _The Last Markdown Editor, Ever_
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
+# PlanMiles
+## _"Não deixe para amanhã, o que você pode planejar hoje"_
+- Sem cadastro
+- Simples
+- Prático
+- e Direto 
 
 
 ### Requisitos
